@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GhostLore AI | Haunted Story Keeper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">✦ GHOST<span>LORE</span></a>
+    <span class="status"><i></i> THE OTHER SIDE IS ONLINE</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">✦ OPEN-SOURCE AI EXPERIENCE</p>
+      <h1>Some stories<br>never <span>rest.</span></h1>
+      <p class="intro">
+        Enter the unknown. Create eerie tales, talk to the haunted
+        terminal, and preserve your stories in a private archive.
+      </p>
+    </section>
+
+    <section class="workspace">
+      <div class="panel story-panel">
+        <p class="label">01 / THE STORY CHAMBER</p>
+        <h2>Summon a story <span>☾</span></h2>
+
+        <form id="storyForm">
+          <label for="idea">What lingers in the dark?</label>
+          <textarea id="idea" required
+            placeholder="A ghost haunting an abandoned railway station...">A forgotten railway station where the last train arrives at 3 AM</textarea>
+
+          <div class="fields">
+            <div>
+              <label for="mood">Atmosphere</label>
+              <select id="mood">
+                <option>Eerie and mysterious</option>
+                <option>Cozy spooky</option>
+                <option>Folklore and remembrance</option>
+                <option>Psychological suspense</option>
+                <option>Darkly funny</option>
+              </select>
+            </div>
+            <div>
+              <label for="length">Story length</label>
+              <select id="length">
+                <option value="short">Short tale</option>
+                <option value="medium" selected>Midnight read</option>
+                <option value="long">Long haunting</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="primary" type="submit" id="summon">
+            ✧ SUMMON STORY ↗
+          </button>
+        </form>
+
+        <div class="privacy">
+          🔒 <span><b>Your stories, your device.</b> Connect a local
+          open-weight AI model for real AI generation.</span>
+        </div>
+
+        <article id="story" aria-live="polite">
+          <div class="empty">
+            <div>☾</div>
+            <p>Your next strange tale is waiting.</p>
+            <small>Enter an idea and summon your story.</small>
+          </div>
+        </article>
+
+        <div class="actions" id="actions" hidden>
+          <button id="save">♡ Save Story</button>
+          <button id="copy">▣ Copy</button>
+          <button id="download">↓ Download TXT</button>
+        </div>
+      </div>
+
+      <aside>
+        <div class="panel terminal-panel">
+          <p class="label">02 / THE OTHER SIDE</p>
+          <h2>Haunted Terminal</h2>
+          <p class="muted">Ask the machine a question.</p>
+          <div class="terminal" id="terminal">
+            <p class="green">ghostlore@local:~$ connection established</p>
+            <p>The quiet is listening...</p>
+          </div>
+          <form id="terminalForm" class="terminal-form">
+            <input id="question" placeholder="Ask the unseen..."
+              maxlength="180" required aria-label="Ask the terminal">
+            <button aria-label="Send question">↵</button>
+          </form>
+          <button class="text-button" id="resetTerminal">↻ Reset terminal</button>
+        </div>
+
+        <div class="panel archive-panel">
+          <p class="label">03 / THE ARCHIVE</p>
+          <h2>Saved Whispers <span id="count">0</span></h2>
+          <div id="archive" class="archive">
+            <p class="muted">No stories saved yet.</p>
+          </div>
+          <button class="text-button" id="clearArchive">Clear archive</button>
+        </div>
+      </aside>
+    </section>
+
+    <section class="open-note">
+      <span class="open-icon">⌘</span>
+      <div>
+        <p class="label">WHY OPEN INNOVATION?</p>
+        <h2>Keep the ghost in your machine.</h2>
+        <p>
+          GhostLore supports Ollama and open-weight models. Local inference
+          can keep prompts on your computer, gives you control over your
+          model, and avoids per-request hosted AI fees. The fallback story
+          generator is a demo, not an AI model.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <span>GHOSTLORE AI</span>
+      <span>BUILT FOR GHOST IN THE MACHINE</span>
+      <span>✦ STORIES BELONG TO YOU ✦</span>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
